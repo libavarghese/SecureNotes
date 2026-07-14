@@ -1,0 +1,26 @@
+# Normalize text files to use LF line endings
+* text=auto eol=lf
+
+# Treat HTML/CSS/JS as text for better diffs
+*.html text
+*.css text
+*.js text
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg text
+*.ico binary
+
+# Prevent linguist from counting libraries or dependencies (if added later)
+node_modules/* linguist-vendored
+
+# Ensure UTF-8 encoding for text files
+*.md text working-tree-encoding=UTF-8
+
+# Keep ZIPs and binaries untouched
+*.zip binary
+*.pdf binary
+*.exe binary
