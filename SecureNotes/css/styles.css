@@ -1,0 +1,136 @@
+body {
+  font-family: "Inter", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #eef4ff, #f8f9fc);
+  color: #222;
+}
+
+header {
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
+  color: white;
+  padding: 18px 24px;
+  font-size: 22px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ececec;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #fafafa;
+  transition: all 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.note {
+  background: #fdfdfd;
+  border-left: 5px solid #2563eb;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.note-title {
+  font-weight: 700;
+  font-size: 17px;
+  color: #2563eb;
+  margin-bottom: 6px;
+}
+
+.btn {
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 18px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+.btn.secondary {
+  background: #eef2ff;
+  color: #2563eb;
+}
+
+.btn.secondary:hover {
+  background: #dbeafe;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.small {
+  font-size: 13px;
+  color: #777;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-size: 14px;
+}
+
+.lock {
+  float: right;
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
