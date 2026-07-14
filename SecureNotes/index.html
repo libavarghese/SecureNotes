@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SecureNotes — Setup</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    SecureNotes (Offline) <span class="lock" id="lockStatus">🔒 Setup</span>
+  </header>
+
+  <div class="container">
+    <!-- First time setup -->
+    <div class="card" id="firstUse">
+      <div class="small">
+        First time? Create a master password (remember it — there is no recovery).
+      </div>
+      <input id="newPwd" type="password" placeholder="Enter master password"/>
+      <input id="newPwd2" type="password" placeholder="Confirm password"/>
+      <div style="margin-top:8px">
+        <button class="btn" id="createBtn">Create</button>
+      </div>
+    </div>
+
+    <!-- Returning user options -->
+    <div class="card hidden" id="returningUser">
+      <div class="small">A master password already exists. Choose an option:</div>
+      <div style="margin-top:8px; display:flex; gap:8px;">
+        <button class="btn" id="proceedBtn">Proceed to Notes</button>
+        <button class="btn secondary" id="wipeBtn">Factory Reset</button>
+      </div>
+    </div>
+
+    <div class="card small">
+      <b>Security notes:</b> Master password is used to derive the encryption key. 
+      Salt is stored locally. Do not forget your password — there's no recovery.
+    </div>
+
+    <footer>Made for phone demo • Save page to home screen for app-like behavior</footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/crypto.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
