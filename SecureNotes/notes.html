@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SecureNotes — Notes</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    SecureNotes (Offline) <span class="lock">🔓 Unlocked</span>
+  </header>
+
+  <div class="container" id="appUI">
+    <div class="card row">
+      <div style="flex:1">
+        <input id="noteTitle" placeholder="Note title"/>
+        <textarea id="noteContent" placeholder="Start typing your secure note..."></textarea>
+      </div>
+      <div style="width:180px">
+        <div style="margin-bottom:8px">
+          <button class="btn" id="saveNoteBtn">Save Note</button>
+        </div>
+        <div style="margin-bottom:8px">
+          <button class="btn secondary" id="lockBtn">Lock</button>
+        </div>
+        <div style="margin-bottom:8px">
+          <button class="btn secondary" onclick="resetEditor()">Reset</button>
+        </div>
+        <div class="small">Search:</div>
+        <input id="searchBox" placeholder="Search decrypted titles..."/>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="row" style="justify-content:space-between;align-items:center">
+        <div><strong>Your Notes</strong> <span class="small" id="noteCount"></span></div>
+        <div class="actions">
+          <button class="btn secondary" id="exportBtn">Export Encrypted</button>
+          <button class="btn secondary" id="importBtn">Import Encrypted</button>
+        </div>
+      </div>
+      <div id="notesList" style="margin-top:10px"></div>
+    </div>
+
+    <!-- Auto-lock setting -->
+    <div class="card">
+      <label class="small">Auto-lock after:
+        <select id="autoLockSelect">
+          <option value="60000">1 minute</option>
+          <option value="120000" selected>2 minutes</option>
+          <option value="300000">5 minutes</option>
+          <option value="600000">10 minutes</option>
+          <option value="0">Never</option>
+        </select>
+      </label>
+    </div>
+
+    <footer>Made for phone demo • Save page to home screen for app-like behavior</footer>
+  </div>
+
+  <script src="js/crypto.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/notes.js"></script>
+</body>
+</html>
